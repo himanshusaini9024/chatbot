@@ -2,7 +2,7 @@ version: '3'
 
 services:
   rails:
-    image: chatwoot/chatwoot:latest
+    image: chatwoot/chatwoot:v3.12.0
     env_file: .env
     depends_on:
       - postgres
@@ -12,7 +12,7 @@ services:
     command: bundle exec rails s -p 3000 -b 0.0.0.0
 
   sidekiq:
-    image: chatwoot/chatwoot:latest
+    image: chatwoot/chatwoot:v3.12.0
     env_file: .env
     depends_on:
       - postgres
